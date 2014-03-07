@@ -75,6 +75,12 @@ location if you run the code as a superuser.
         start lsyncd
 
 
+#### Ready to use:
+
+Make changes to the source directory on master and check whether they are
+propagated to the respective slave destinations.
+
+
 ### Credits:
 
 Thanks to rackspace for an excellent [tutorial](http://www.rackspace.com/knowledge_center/article/install-and-configure-lsyncd)
