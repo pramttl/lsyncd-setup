@@ -58,21 +58,7 @@ need to be setup. Also lsyncd doesn't start itself so we need to start it explic
 This step is optional if you are experienced. Its convenient to have startup scripts
 which will make it easy ahead to start lsyncd.
 
-description "lsyncd file syncronizer"
-    
-    start on (starting network-interface
-        or starting network-manager
-        or starting networking)
-                
-        stop on runlevel [!2345]
-        
-        expect fork
-        
-        respawn
-        respawn limit 10 5
-               
-        exec /usr/local/bin/lsyncd /etc/lsyncd.lua
-
+        # sudo python init-lsyncd.py
 
 
 #### Step 5: Create lsyncd configuration
@@ -85,6 +71,8 @@ location if you run the code as a superuser.
 
 
 #### Step 6: start lsyncd
+
+        start lsyncd
 
 
 ### Credits:
